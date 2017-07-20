@@ -20,13 +20,13 @@ app.use(logger('dev'));
 // wrap this in a function
 client.messages.create({
     body: 'KrAzee K0d3rz be KrAzee',
-    to: '+12025496087',  // Text this number
-    from: '+12402610612' // From our Twilio number
+    to: '+12066011711',  // Text this number  //Trevor: +12066011711
+    from: '+13608420945' // From our Twilio number  //Trevor :+13608420945
 })
-.then((message) => console.log(message.sid));
+.then((message) => console.log(`message sent! ${message.sid}`));
 
 
-/*app.listen(process.env.PORT || 3000, () => {
-  console.log(`listening on port ${process.env.PORT}`);
-});
-*/
+// app.listen(process.env.PORT || 3000, () => {
+//   console.log(`listening on port ${process.env.PORT}`);
+// });
+
