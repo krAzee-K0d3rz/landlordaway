@@ -2,8 +2,10 @@ console.log('KrAzee K0d3rz are for realz');
 
 require('dotenv').config();
 
-const accountSid = process.env.TWILIO_ID;
-const authToken = process.env.TWILIO_TOKEN;
+const TWILIO_ID = process.env.TWILIO_ID;
+const TWILIO_TOKEN = process.env.TWILIO_TOKEN;
+const TWILIO_PHONE = process.env.TWILIO_PHONE;
+const USER_PHONE = process.env.USER_PHONE;
 console.log(`accountSid is ${accountSid}`)
 console.log(`token is ${authToken}`)
 
@@ -18,8 +20,8 @@ app.use(logger('dev'));
 
 client.messages.create({
     body: 'KrAzee K0d3rz be KrAzee',
-    to: '+12025496087',  // Text this number
-    from: '+12402610612' // From our Twilio number
+    to: USER_PHONE,  // Text this number
+    from: TWILIO_PHONE // From our Twilio number
 })
 .then((message) => console.log(message.sid));
 
