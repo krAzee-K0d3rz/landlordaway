@@ -18,12 +18,15 @@ const app = express();
 
 app.use(logger('dev'));
 
+
+// wrap this in a function
 client.messages.create({
     body: 'KrAzee K0d3rz be KrAzee',
     to: USER_PHONE,  // Text this number
     from: TWILIO_PHONE // From our Twilio number
 })
 .then((message) => console.log(message.sid));
+
 
 /*app.listen(process.env.PORT || 3000, () => {
   console.log(`listening on port ${process.env.PORT}`);
